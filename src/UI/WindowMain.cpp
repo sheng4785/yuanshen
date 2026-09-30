@@ -66,7 +66,6 @@ WindowMain::WindowMain(QWidget* parent) :
     connect(ui.tableWidget, &QTableWidget::itemChanged, this, &WindowMain::updateNote);
 
     QThreadPool::globalInstance()->setMaxThreadCount(QThread::idealThreadCount());
-    o.start();
     ui.tableWidget->setColumnCount(5);
     QStringList header;
     header << "序号"
